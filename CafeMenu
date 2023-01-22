@@ -1,4 +1,4 @@
---create a cafe menu database 
+#create a cafe menu database 
 CREATE TABLE cafe_menu(id INTEGER PRIMARY KEY, menu_item TEXT, cook_time_minutes INTEGER, price INTEGER, category TEXT);
 
 INSERT INTO cafe_menu VALUES(1, 'vanilla bean cheesecake', 60, 15, 'dessert');
@@ -17,16 +17,16 @@ INSERT INTO cafe_menu VALUES(13, 'tuna melt', 5, 15, 'lunch');
 INSERT INTO cafe_menu VALUES(14, 'espresso', 5, 7, 'drink');
 INSERT INTO cafe_menu VALUES(15, 'grits', 8, 11, 'breakfast');
 
---display database; order by price
+#display database; order by price
 SELECT * FROM cafe_menu
 ORDER BY price DESC;
 
---average price of drinks on menu
+#average price of drinks on menu
 SELECT AVG(price)
 FROM cafe_menu
 WHERE category = 'drink';
 
---what are the five most expensive items on the menu? 
+#what are the five most expensive items on the menu? 
 SELECT menu_item, price, category
 FROM cafe_menu
 ORDER BY price desc
